@@ -5,12 +5,15 @@ Package.describe({
   git: "git@github.com:amschrader/meteor-ravelry-api.git"
 });
 
-Package.on_use(function (api, where) {
-  api.use('oauth1', ['client', 'server']);
+Package.onTest(function(api) {
+  api.use('tinytest');
+  api.use('amschrader:ravelry');
+  api.addFiles('ravelry-tests.js');
+});
+
+Package.onUse(function (api, where) {
+  api.use('oauth1@1.1.2', ['client', 'server']);
   api.add_files(['ravelry.js'], 'server');
   
   api.export && api.export('Ravelry', 'server');
-});
-
-Package.on_test(function (api) {
 });
