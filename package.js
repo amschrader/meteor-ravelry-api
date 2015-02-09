@@ -2,7 +2,7 @@ Package.describe({
   summary: "Ravelry API wrapper using OAuth1Binding of Meteor Ravelry Service",
   name: "amschrader:ravelry-api",
   version: "0.1.0",
-  git: "git@github.com:amschrader/meteor-ravelry-api.git"
+  git: "https://github.com/amschrader/meteor-ravelry-api.git"
 });
 
 Package.onTest(function(api) {
